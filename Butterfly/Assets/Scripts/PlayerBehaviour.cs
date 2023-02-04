@@ -6,21 +6,23 @@ public class PlayerBehaviour : MonoBehaviour
 {
 
     public Sprite player;
-    public double speed;
-    public double health;
-    public double strength;
-    public double gravity;
+    public float speed;
+    public float health;
+    public float strength;
+    public float gravity;
 
-    double xD;
-    double yD;
+    float xD;
+    float yD;
 
     bool canJump;
     bool gRequired;
-    double pull;
+    float pull;
     
     void Start()
     {
         canJump = true;
+        gRequired = true;
+        pull = 1f;
     }
 
     void Update()
@@ -28,16 +30,21 @@ public class PlayerBehaviour : MonoBehaviour
 
         // Player movement control
 
-        if (Input.GetKey("A")){
+        if (Input.GetKey(KeyCode.A)){
             xD = -speed;
-        } else if (Input.GetKey("D")){
+        } else if (Input.GetKey(KeyCode.D)){
             xD = speed;
         }
 
-        if (Input.GetKey("Space") && canJump){
-            canjump = false;
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)){
+            xD = 0;
+        }
+
+        if (Input.GetKey(KeyCode.Space) && canJump){
+            Debug.Log("Got here");
+            canJump = false;
             gRequired = true;
-            pull = 5;
+            pull = 10f;
         }
 
         //Player combat
@@ -47,14 +54,21 @@ public class PlayerBehaviour : MonoBehaviour
         // Gravity
 
         if (gRequired && pull > -gravity){
-            pull -= 0.1;
+            pull -= 0.2f;
         }
 
-        transform.position += new Vector3(xD, yD, 0) * Time.deltaTime;
+        transform.position += new Vector3(xD, pull, 0) * Time.deltaTime;
+    }
+
+    void OnCollisionEnter2D(Collision2D col){
+        if (col.gameObject.tag == "ground"){
+            grounded();
+        }
     }
 
     void grounded(){
         pull = 0;
+        canJump = true;
         gRequired = false;
     }
 }
