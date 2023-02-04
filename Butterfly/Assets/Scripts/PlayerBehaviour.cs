@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public Sprite player;
+    public int speed;
+    public int health;
+    public int strength;
+    int xD;
+    int yD;
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey("A")){
+            xD = -speed;
+        } else if (Input.GetKey("D")){
+            xD = speed;
+        }
+
+        if (Input.GetKey("SPACE")){
+            
+        }
+
+        transform.position += new Vector3(xD, yD, 0) * Time.deltaTime;
     }
 }
