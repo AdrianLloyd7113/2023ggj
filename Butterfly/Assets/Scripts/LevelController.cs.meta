@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c5a97702185bc45af8f66518b8c6367f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - camera: {instanceID: 0}
+  - enemy: {instanceID: 0}
+  - boss1: {fileID: 4516337557201997525, guid: 754f1fe283d7449389230580484eeefc, type: 3}
+  - boss2: {fileID: 4472593988584707738, guid: 3c430771e13634a4eb029592be5c7a77, type: 3}
+  - boss3: {fileID: 6007904175023370457, guid: 39790df1a90dc46d1a13eee799929a09, type: 3}
+  - boss4: {fileID: 7774413235902413062, guid: d4ff763227e6c4ef8b1fba1d56e3bcc2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,5 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Car.unity
+    guid: 53420ba0d96cc4d9d949d1b43253e501
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 309a46585204e4c11bd856fc94437abc
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Room.unity
+    guid: 9fb74027cca044859b2a59a9c676ab7a
+  - enabled: 1
+    path: Assets/Scenes/Dead.unity
+    guid: 474d43c9a0b6c43f7a2d74757a6a9cc4
+  - enabled: 1
+    path: Assets/Scenes/Decision.unity
+    guid: 2414c4286eb5c4f799c9b0bf5a4aaa2d
+  - enabled: 1
+    path: Assets/Scenes/FinalSplash.unity
+    guid: 53c37b23ab1744db68c53fa65c47e075
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 6828b8213aa4b4f2ba4022e81109ba6d
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: acb60357966ca4a94987ccb445302e65
   m_configObjects: {}
